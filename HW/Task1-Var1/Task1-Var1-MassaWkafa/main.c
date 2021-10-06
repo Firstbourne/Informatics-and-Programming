@@ -2,6 +2,7 @@
 #include <locale.h>
 #include <math.h>
 #define scale 1000000
+#define rasstp 40
 
 int main() {
 	setlocale(LC_ALL, "Russian"); //Ввод русского языка.
@@ -37,7 +38,7 @@ int main() {
 
 	Vpol = (w * d * t4) / scale;  //Теперь можем найти Объем полки.
 
-	Pkol = h / 40;  //Считаем количество полок в шкафу. 40 - Расстояние между полками.
+	Pkol = h / rasstp;  //Считаем количество полок в шкафу. 40 - Расстояние между полками. rasstp - переменная,как и просили.
 
 	M = (Vst * PDVP) + ((Vbok * 2) * PDSP) + ((Vkr * 2) * PDSP) + ((Vdoor * 2) * PWOD) + (floor(Pkol) * Vpol * PDSP);
 	// Выше формула нахождения массы шкафа.
