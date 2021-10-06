@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <math.h>
+#define scale 1000000
 
 int main() {
 	setlocale(LC_ALL, "Russian"); //Ввод русского языка.
@@ -25,18 +26,18 @@ int main() {
 
 
 	printf("Начинается подсчёт объемов \n");
-	Vdoor = (h * w * t2) / 1000000;
-	Vkr = (w * d * t3) / 1000000;
-	Vst = (h * w * t1) / 1000000;
-	Vbok = (h * d * t3) / 1000000;
+	Vdoor = (h * w * t2) / scale;
+	Vkr = (w * d * t3) / scale;
+	Vst = (h * w * t1) / scale;
+	Vbok = (h * d * t3) / scale;
 
 	float t4; //Для нахождения объема полки нужна ее толщина,вводим её.
 	printf("Введите толщину полки \n");
 	scanf_s("%f", &t4);
 
-	Vpol = (w * d * t4) / 1000000;  //Теперь можем найти Объем полки.
+	Vpol = (w * d * t4) / scale;  //Теперь можем найти Объем полки.
 
-	Pkol = h / 40;  //Считаем количество полок в шкафу.
+	Pkol = h / 40;  //Считаем количество полок в шкафу. 40 - Расстояние между полками.
 
 	M = (Vst * PDVP) + ((Vbok * 2) * PDSP) + ((Vkr * 2) * PDSP) + ((Vdoor * 2) * PWOD) + (floor(Pkol) * Vpol * PDSP);
 	// Выше формула нахождения массы шкафа.
