@@ -9,7 +9,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 
 	int rej, flag = 0;
-	int c, x, p = 0, w = 0, diap = 1000, min = 0, max = 1000;
+	int c, x, p = 1, w = 0, diap = 1000, min = 0, max = 1000;
 	char podskaz;
 	char Больше = '>';
 	char Меньше = '<';
@@ -31,7 +31,6 @@ int main() {
 
 
 	if (flag == 1) {
-		printf("Вы выбрали 1 режим \n");
 		printf("Угадайте число от 1 до 1000 \n");
 		srand(time(NULL));
 		c = rand() % 1000 + 1;
@@ -62,7 +61,7 @@ int main() {
 				srand(time(NULL));
 				c = rand() % (max - min + 1) + min;
 				printf("Вы загадали это число = %d ?\n", c);
-				scanf_s("%c", &podskaz);
+				scanf_s("%c", &podskaz , 1);
 				podskaz = getchar();
 
 				if (podskaz == Больше) {
