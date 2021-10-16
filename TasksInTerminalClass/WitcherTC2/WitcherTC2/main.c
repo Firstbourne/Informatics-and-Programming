@@ -10,7 +10,6 @@ int main() {
 	printf("Введите стоимость за услугу Ведьмака - \n");
 	scanf_s("%d", &price);
 
-	while (price > 0) {
 		while (price >= mn4) {
 			kol4 = kol4 + 1;
 			price = price - mn4;
@@ -27,7 +26,7 @@ int main() {
 			kol1 = kol1 + 1;
 			price = price - mn1;
 		}
-	}
+
 	printf("Для оплаты услуги,вам потребуется дать Ведьмаку монеты - \n");
 	printf(" Номиналом 25 -  Номиналом 10 -  Номиналом 5 -  Номиналом 1 - \n"); 
 	printf("%d  %d  %d  %d", kol4, kol3, kol2, kol1);
