@@ -51,7 +51,11 @@ int main() {
 		printf("%d ", Massiv[i]);
 	}
 
-	printf("\nДействующий массив:\n");
+	temp = Massiv[ind2];
+	Massiv[ind2] = Massiv[ind1];
+	Massiv[ind1] = temp;
+
+	printf("\nИзначальный массив:\n");
 	for (int i = 0; i < SIZE; i++) {
 		printf("%d ", Massiv[i]);
 	}
