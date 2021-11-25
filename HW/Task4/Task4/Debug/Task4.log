@@ -1,0 +1,4 @@
+﻿  main.c
+D:\GitHub\Alexander1\Informatics-and-Programming\HW\Task4\Task4\main.c(19,12): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+D:\GitHub\Alexander1\Informatics-and-Programming\HW\Task4\Task4\main.c(100,72): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  Task4.vcxproj -> D:\GitHub\Alexander1\Informatics-and-Programming\HW\Task4\Debug\Task4.exe
