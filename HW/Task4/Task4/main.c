@@ -24,6 +24,10 @@ int main() {
 	int scannedproduct;
 	int addedproduct = 0;
 	float totalprice;
+	int finsum = 0;
+	int sumsale = 0;
+	float finprice = 0;
+
 
 	for (int i = 0; i < SIZE; i++) { //Генерация штрих-кодов и скидки.
 		barcode[i] = rand() % 8999 + 1000;
@@ -33,14 +37,18 @@ int main() {
 		//printf(" %d ", discount[i]);
 	}
 
-
+	printf("\n Здравствуйте,выберите операцию: \n");
+	printf("\n Вывести информацию о каждом товаре - '0'\n Отсканировать товар - '1'\n Посмотреть информацию о товаре - '2'\n Добавить товар в чек - '3'\n Сформировать чек покупки - '4'\n  Выйти из меню - '9'\n");
+	
 	while (1) {
 
-		printf("\n Здравствуйте,выберите операцию: \n");
-		printf("\n Вывести информацию о каждом товаре - '0'\n Отсканировать товар - '1'\n Посмотреть информацию о товаре - '2'\n Добавить товар в чек - '3'\n Сформировать чек покупки - '4'\n Выйти из меню - '9'\n");
+		//printf("\n Здравствуйте,выберите операцию: \n");
+		//printf("\n Вывести информацию о каждом товаре - '0'\n Отсканировать товар - '1'\n Посмотреть информацию о товаре - '2'\n Добавить товар в чек - '3'\n Сформировать чек покупки - '4'\n Выйти из меню - '9'\n");
+		printf("\n");
 		scanf_s("%d", &Menu);
+		
 
-		if (Menu == 9) return exit;
+		if (Menu == 9) return 0;
 
 		switch (Menu) {
 		case 0:
@@ -98,10 +106,22 @@ int main() {
 					if (check[i] != 0) {
 
 						totalprice = (price[i] - price[i] * discount[i] / 100) * check[i];
-						printf("\nТовары в чеке - %s | Количество товаров - %d | Цена - %d | Скидка - %d%% | Цена со скидкой - %.2f | \n", mouses[i], check[i], price[i] * check[i], discount[i], totalprice);															
+
+						finsum += price[i] * check[i];
+						finprice += totalprice;
+
+						printf("\nТовары в чеке - %s x %d | Цена - %d | Скидка - %d%% | Цена со скидкой - %.2f |\n", mouses[i], check[i], price[i] * check[i], discount[i], totalprice);
+	
 					}
-				}																	
+				}
+				sumsale = finsum - finprice;
+				printf("===================================================================\n");
+				printf("Цена без скидки - %d\n", finsum);
+				printf("Общая скидкая - %d\n", sumsale);
+				printf("Итого: %.2f", finprice);
 			}
+			break;
 		}
 	}
 }
+

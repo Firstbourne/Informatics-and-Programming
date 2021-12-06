@@ -4,13 +4,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-int Gen_Num_Check(int *massiv, int size, int compos) {  //Проверка сгенерированного числа на повторяющиеся элементы.
+	int Gen_Num_Check(int* massiv, int size, int compos) {  //Проверка сгенерированного числа на повторяющиеся элементы.
 	int flag = 0;
-	for (int i = 0; i < size; i++) {
-		if (compos == massiv[i])
-			flag = 1;
-	}
-	return flag;
+		for (int i = 0; i < size; i++) {
+			if (compos == massiv[i])
+				flag = 1;
+		}
+		return flag;
 }
 
 int Generate_Number(int n) {  //Генерация числа компьютером и его дальнейшая проверка на корректность ( 0 элемент не равен 0).

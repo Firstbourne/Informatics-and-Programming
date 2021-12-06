@@ -10,20 +10,20 @@ int main() {
 	printf("Введите стоимость за услугу Ведьмака - \n");
 	scanf_s("%d", &price);
 
-		while (price >= mn4) {
-			kol4 = kol4 + 1;
-			price = price - mn4;
-		}
+	while (price >= mn4) {
+		kol4 = kol4++;
+		price = price - mn4;
+	}
 		while (price >= mn3) {
-			kol3 = kol3 + 1;
+			kol3 = kol3++;
 			price = price - mn3;
 		}
 		while (price >= mn2) {
-			kol2 = kol2 + 1;
+			kol2 = kol2++;
 			price = price - mn2;
 		}
 		while (price >= mn1) {
-			kol1 = kol1 + 1;
+			kol1 = kol1++;
 			price = price - mn1;
 		}
 
@@ -32,4 +32,4 @@ int main() {
 	printf("%d  %d  %d  %d", kol4, kol3, kol2, kol1);
 	return 0;
 
-}
+} 

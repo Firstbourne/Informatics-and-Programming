@@ -1,4 +1,4 @@
-//Bakhtiarov A. V. 2021
+//Bakhtiarov A. V. 
 
 #include <stdio.h>
 #include <math.h>
