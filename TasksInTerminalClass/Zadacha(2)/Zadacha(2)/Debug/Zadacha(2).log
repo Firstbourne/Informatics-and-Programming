@@ -1,0 +1,3 @@
+﻿  main.c
+D:\University\GitHub\Alexander1\Informatics-and-Programming\TasksInTerminalClass\Zadacha(2)\Zadacha(2)\main.c(30,64): warning C4013: abs: нет определения; предполагается "extern" с возвратом типа "int"
+  Zadacha(2).vcxproj -> D:\University\GitHub\Alexander1\Informatics-and-Programming\TasksInTerminalClass\Zadacha(2)\Debug\Zadacha(2).exe

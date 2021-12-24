@@ -117,7 +117,7 @@ int main() {
 				sumsale = finsum - finprice;
 				printf("===================================================================\n");
 				printf("Цена без скидки - %d\n", finsum);
-				printf("Общая скидкая - %d\n", sumsale);
+				printf("Общая скидка - %d\n", sumsale);
 				printf("Итого: %.2f", finprice);
 			}
 			break;

@@ -1,0 +1,6 @@
+﻿  main.c
+D:\University\GitHub\Alexander1\Informatics-and-Programming\TasksInTerminalClass\Zadacha(3)\Zadacha(3)\main.c(37,23): warning C4013: malloc: нет определения; предполагается "extern" с возвратом типа "int"
+D:\University\GitHub\Alexander1\Informatics-and-Programming\TasksInTerminalClass\Zadacha(3)\Zadacha(3)\main.c(50,18): warning C4013: realloc: нет определения; предполагается "extern" с возвратом типа "int"
+D:\University\GitHub\Alexander1\Informatics-and-Programming\TasksInTerminalClass\Zadacha(3)\Zadacha(3)\main.c(50,42): warning C4047: =: "int *" отличается по уровням косвенного обращения от "int"
+D:\University\GitHub\Alexander1\Informatics-and-Programming\TasksInTerminalClass\Zadacha(3)\Zadacha(3)\main.c(56,6): warning C4013: free: нет определения; предполагается "extern" с возвратом типа "int"
+  Zadacha(3).vcxproj -> D:\University\GitHub\Alexander1\Informatics-and-Programming\TasksInTerminalClass\Zadacha(3)\Debug\Zadacha(3).exe
