@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\thego\Desktop\Project1\Project1\main.c(146,14): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\thego\Desktop\Project1\Project1\main.c(149,21): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+  Project1.vcxproj -> C:\Users\thego\Desktop\Project1\Debug\Project1.exe

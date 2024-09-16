@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#define scale 1000000
+#define rasstp 40
+
+int main() {
+	setlocale(LC_ALL, "Russian"); //Ввод русского языка.
+
+	int PDSP, PDVP, PWOD; //Ввод плотностей нужных элементов.
+	printf("Введите плотности ДСП ДВП и Дерева - \n");
+	scanf_s("%d %d %d", &PDSP, &PDVP, &PWOD);
+
+	int Pkol, h, d, w, t2 = 1; //Переменные целочисленного типа.
+	float M, Vdoor, Vpol, Vkr, Vst, Vbok, t1 = 0.5, t3 = 1.5; //Переменные вещественного типа.
+
+
+	printf("Введите высоту (180 - 220), Ширину (80 - 120), Глубину (50 - 90) \n");
+	scanf_s("%d %d %d", &h, &w, &d);
+
+	int control; //Переменная для проверки условия и для подстраховки.
+
+	if ((h > 179 && h < 221) && (w > 79 && w < 121) && (d > 49 && d < 91))
+		control = 1;
+	else
+		printf("Недопустимое значение \n"); //Задали диапазон значений и проверяем его выполнение.
+
+
+	printf("Начинается подсчёт объемов \n");
+	Vdoor = (h * w * t2) / scale;
+	Vkr = (w * d * t3) / scale;
+	Vst = (h * w * t1) / scale;
+	Vbok = (h * d * t3) / scale;
+
+	float t4; //Для нахождения объема полки нужна ее толщина,вводим её.
+	printf("Введите толщину полки \n");
+	scanf_s("%f", &t4);
+
+	Vpol = (w * d * t4) / scale;  //Теперь можем найти Объем полки.
+
+	Pkol = h / rasstp;  //Считаем количество полок в шкафу. 40 - Расстояние между полками. rasstp - переменная,как и просили.
+
+	M = (Vst * PDVP) + ((Vbok * 2) * PDSP) + ((Vkr * 2) * PDSP) + ((Vdoor * 2) * PWOD) + (floor(Pkol) * Vpol * PDSP);
+	// Выше формула нахождения массы шкафа.
+
+	printf("Масса шкафа = %.1f", M);
+
+	return 0;
+}
